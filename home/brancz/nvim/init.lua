@@ -87,6 +87,7 @@ vim.keymap.set("n", "gr", tb.lsp_references)
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "markdown preview (browser)" })
 require("telescope").load_extension("fzf")
 
 -- formatting ------------------------------------------------------------

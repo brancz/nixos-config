@@ -26,6 +26,7 @@
       conform-nvim
       lualine-nvim
       catppuccin-nvim
+      markdown-preview-nvim # :MarkdownPreviewToggle -> live preview in browser
       (nvim-treesitter.withPlugins (p: [
         p.rust p.nix p.lua p.go p.c p.cpp p.toml p.yaml
         p.json p.markdown p.bash p.proto p.sql

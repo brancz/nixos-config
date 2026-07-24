@@ -3,7 +3,6 @@
 
   inputs = {
     # Unstable is the right call for a desktop (fresh ghostty/neovim/nvidia).
-    # Pin your homelab hosts to a release branch in the same flake if you merge them later.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -36,5 +35,10 @@
         }
       ];
     };
+
+    # Reusable, headless-safe home-manager module. Exposed as a flake output so
+    # other flakes can import it (`inputs.<this>.homeModules.base`) and share the
+    # shell / editor / git / gpg config without duplicating it.
+    homeModules.base = import ./home/brancz/base.nix;
   };
 }

@@ -20,6 +20,6 @@
     };
   };
 
-  # For SSH into your (NixOS) homelab hosts, add to THEIR configs instead:
+  # For SSH into other NixOS hosts, install the terminfo on THEM instead:
   #   environment.systemPackages = [ pkgs.ghostty.terminfo ];
 }
